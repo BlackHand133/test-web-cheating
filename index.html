@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLOv8 Real-Time Detection</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; background: #f0f0f0; }
+        #video-container { position: relative; width: 640px; margin: 20px auto; }
+        #video-feed { transform: scaleX(-1); }
+        canvas { position: absolute; top: 0; left: 0; }
+        .controls { margin: 20px; }
+    </style>
+</head>
+<body>
+    <h1>YOLOv8 Real-Time Detection</h1>
+    <div class="controls">
+        <button id="start-camera">📷 กล้อง</button>
+        <input type="file" id="upload-video" accept="video/*">
+    </div>
+    <div id="video-container">
+        <video id="video-feed" autoplay playsinline></video>
+        <canvas id="detection-canvas"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/onnxjs/dist/onnx.all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
