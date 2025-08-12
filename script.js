@@ -8,7 +8,7 @@ let modelLoaded = false;
 // โหลดโมเดล YOLOv8 (ONNX)
 async function loadONNXModel() {
     session = new onnx.InferenceSession({ backendHint: 'webgl' });
-    await session.loadModel('./yolov8n.onnx');
+    await session.loadModel('./best.onnx');
     modelLoaded = true;
     console.log("✅ ONNX model loaded");
 }
